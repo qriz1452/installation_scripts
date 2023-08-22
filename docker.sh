@@ -63,3 +63,26 @@ for more details refer  https://docs.docker.com/install/linux/docker-ce/ubuntu/#
         
         - even after following the above commands if you face any issue in ruuning commands then run below command
           chmod 777 /var/run/docker.sock
+
+
+
+==========================  OR  ===============================================
+
+# ubuntu VM
+
+curl get.docker.com | sh
+
+
+======================  OR           ==============
+# Cent OS VM
+
+    sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+    sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+    sudo yum -y install docker-ce
+    sudo systemctl enable --now docker
+    sudo usermod -aG docker cloud_user
+
+
+===============================================
+
+
