@@ -3,15 +3,16 @@
 Make sure docker installed in master and nodes, make sure master has 2 cpu's 
 
 Execute below commands in both master and node 
-
- - sudo apt-get update && sudo apt-get install -y apt-transport-https curl
- - curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
- - cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list <br />
-   deb https://apt.kubernetes.io/ kubernetes-xenial main <br />
-   EOF
- - sudo apt-get update
- - sudo apt-get install -y kubelet kubeadm kubectl
- - sudo apt-mark hold kubelet kubeadm kubectl
+```
+sudo apt-get update && sudo apt-get install -y apt-transport-https curl
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
+deb https://apt.kubernetes.io/ kubernetes-xenial main
+EOF
+sudo apt-get update
+sudo apt-get install -y kubelet kubeadm kubectl
+sudo apt-mark hold kubelet kubeadm kubectl
+```
 
 for more details https://kubernetes.io/docs/setup/independent/install-kubeadm/
 
